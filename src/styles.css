@@ -805,3 +805,308 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/*==================== BLOG ====================*/
+.blog__container {
+    row-gap: 1.5rem;
+}
+
+.blog__card {
+    background-color: var(--container-color);
+    border: 1px solid var(--scroll-bar-color);
+    border-radius: .75rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px hsla(var(--hue-color), 48%, 8%, .04);
+}
+
+.blog__card:hover {
+    box-shadow: 0 4px 12px hsla(var(--hue-color), 48%, 8%, .08);
+}
+
+.blog__meta {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--text-color-light);
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.blog__dot {
+    opacity: .6;
+}
+
+.blog__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-75);
+    line-height: 1.35;
+}
+
+.blog__title a {
+    color: var(--title-color);
+}
+
+.blog__title a:hover {
+    color: var(--first-color);
+}
+
+.blog__summary {
+    color: var(--text-color);
+    margin-bottom: var(--mb-1);
+    line-height: 1.6;
+}
+
+.blog__tags,
+.portfolio__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: var(--mb-1);
+}
+
+.blog__tag,
+.portfolio__tag {
+    font-size: var(--smaller-font-size);
+    color: var(--first-color-alt);
+    background-color: var(--input-color);
+    padding: .25rem .625rem;
+    border-radius: 1rem;
+    font-weight: var(--font-medium);
+}
+
+.blog__link {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.blog__link:hover {
+    color: var(--first-color-alt);
+}
+
+.blog__link i {
+    transition: transform .2s ease;
+}
+
+.blog__link:hover i {
+    transform: translateX(.25rem);
+}
+
+/*==================== PORTFOLIO ====================*/
+.portfolio__container {
+    row-gap: 1.5rem;
+}
+
+.portfolio__card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    background-color: var(--container-color);
+    border: 1px solid var(--scroll-bar-color);
+    border-radius: .75rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px hsla(var(--hue-color), 48%, 8%, .04);
+}
+
+.portfolio__card:hover {
+    box-shadow: 0 4px 12px hsla(var(--hue-color), 48%, 8%, .08);
+}
+
+.portfolio__icon-wrap {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: var(--input-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio__icon {
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
+.portfolio__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.portfolio__subtitle {
+    display: block;
+    color: var(--text-color-light);
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__description {
+    color: var(--text-color);
+    margin-bottom: var(--mb-1);
+    line-height: 1.6;
+}
+
+.portfolio__link {
+    margin-top: var(--mb-0-5);
+}
+
+@media screen and (max-width: 567px) {
+    .portfolio__card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*==================== BLOG POST ====================*/
+.post__container {
+    max-width: 720px;
+}
+
+.post__back {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    color: var(--text-color-light);
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.post__back:hover {
+    color: var(--first-color);
+}
+
+.post__header {
+    margin-bottom: var(--mb-2-5);
+    padding-bottom: var(--mb-2);
+    border-bottom: 1px solid var(--scroll-bar-color);
+}
+
+.post__title {
+    font-size: var(--big-font-size);
+    color: var(--title-color);
+    line-height: 1.2;
+    margin-bottom: var(--mb-1);
+}
+
+.post__meta {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--text-color-light);
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.post__dot {
+    opacity: .6;
+}
+
+.post__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.post__tag {
+    font-size: var(--smaller-font-size);
+    color: var(--first-color-alt);
+    background-color: var(--input-color);
+    padding: .25rem .625rem;
+    border-radius: 1rem;
+    font-weight: var(--font-medium);
+}
+
+.post__body {
+    color: var(--text-color);
+    line-height: 1.75;
+    font-size: var(--normal-font-size);
+}
+
+.post__body h2 {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-top: var(--mb-2-5);
+    margin-bottom: var(--mb-1);
+}
+
+.post__body h3 {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-0-75);
+}
+
+.post__body p {
+    margin-bottom: var(--mb-1-5);
+}
+
+.post__body ul,
+.post__body ol {
+    margin-bottom: var(--mb-1-5);
+    padding-left: 1.5rem;
+}
+
+.post__body ul {
+    list-style: disc;
+}
+
+.post__body ol {
+    list-style: decimal;
+}
+
+.post__body li {
+    margin-bottom: var(--mb-0-5);
+}
+
+.post__body a {
+    color: var(--first-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.post__body a:hover {
+    color: var(--first-color-alt);
+}
+
+.post__body strong {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.post__body code {
+    background-color: var(--input-color);
+    color: var(--first-color-alt);
+    padding: .125rem .375rem;
+    border-radius: .25rem;
+    font-size: .875em;
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+}
+
+.post__body pre {
+    background-color: var(--input-color);
+    padding: 1rem;
+    border-radius: .5rem;
+    overflow-x: auto;
+    margin-bottom: var(--mb-1-5);
+}
+
+.post__body pre code {
+    background: none;
+    color: var(--text-color);
+    padding: 0;
+    font-size: var(--small-font-size);
+}
+
+.post__body blockquote {
+    border-left: 3px solid var(--first-color);
+    padding-left: 1rem;
+    margin: var(--mb-1-5) 0;
+    color: var(--text-color-light);
+    font-style: italic;
+}
+
+.post__body img {
+    border-radius: .5rem;
+    margin: var(--mb-1-5) 0;
+}
