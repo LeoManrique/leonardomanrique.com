@@ -98,6 +98,8 @@ html {
     scroll-behavior: smooth;
     background-color: var(--body-color);
     min-height: 100%;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
 }
 
 body {
