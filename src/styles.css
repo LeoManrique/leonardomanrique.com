@@ -715,16 +715,8 @@ img {
         width: 350px;
     }
 
-    .about__description {
-        text-align: initial;
-    }
-
     .about__info {
         justify-content: space-between;
-    }
-
-    .about__buttons {
-        justify-content: initial;
     }
 
     .qualification__tabs {

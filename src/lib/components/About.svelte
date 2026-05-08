@@ -16,7 +16,7 @@
 		<div class="about__data">
 			<p class="about__description">{data.description}</p>
 
-			<div class="about__buttons" style="display: flex; justify-content: center; width: 100%">
+			<div class="about__buttons">
 				{#if data.resume}
 					<a
 						href={data.resume}
