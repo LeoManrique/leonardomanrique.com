@@ -1,6 +1,4 @@
 import type { PageLoad } from './$types';
+import portfolio from '$content/portfolio/portfolio.json';
 
-export const load: PageLoad = async ({ fetch }) => {
-	const res = await fetch('/assets/data/portfolio.json');
-	return await res.json();
-};
+export const load: PageLoad = () => portfolio;
