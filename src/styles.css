@@ -383,6 +383,7 @@ img {
 .about__description {
     text-align: center;
     margin-bottom: var(--mb-2-5);
+    white-space: pre-line;
 }
 
 .about__info {
@@ -667,7 +668,7 @@ img {
     }
 
     .section {
-        padding: 6rem 0 2rem;
+        padding: 3rem 0 1rem;
     }
 
     .header {
