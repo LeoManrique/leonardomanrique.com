@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "LeoSync",
-      "subtitle": "End-to-end encrypted file sync",
+      "subtitle": "End-to-end reliable file sync",
       "description": "An easy, safe, and efficient way to sync files between devices. Desktop and server apps built in Go. File activities survive to offline work periods and complex user operations, relay handles advanced cases ensuring data safety. Tested on macOS, Linux, and Windows.",
       "tags": ["Go", "Postgres", "Docker", "Synchronization", "Wails", "Svelte 5"],
       "url": "https://leosync.leonardomanrique.com",
