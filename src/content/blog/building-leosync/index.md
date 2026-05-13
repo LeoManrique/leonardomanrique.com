@@ -23,6 +23,8 @@ Later I also wanted a sync service that can keep my save files from Emulators sy
 
 Honestly I think Syncthing works perfectly for most people with my use case. I also I own a Raspberry Pi 5 and I have access to a VPS, so I could have used any of those as an always on node to sync my files to. But there was one use case that was not covered for me: offline work. What if I work on a plane or a train? What if I my server goes down? Thinking about debugging and manually sync those changes again was not something fun to think about.
 
+I was also inspired by how OneDrive and iCloud can synchornize changes that the user has done offline, and even provide an visual feeback of which files will be sent for sync when back online. This didn't seem like a straight forward implementation but also not impossible as I already worked on systems data integrations, assuming failures or unreliable connections.
+
 ## The stack
 
 When I started the development of the project all the stack was completely different. I wanted to keep this development simple, so I went for the "easiest" technology I didn't even know so much about but was excited to learn more of: Python. I researched about the current status of Python for this kind of tools. For the file watcher it seemed to have quite mature libraries that handled the OS APIs in a stable way. Plus I found out about FastAPI, which apparently increased significantly the speed of Python processing the necessary data to act as an HTTP server.
