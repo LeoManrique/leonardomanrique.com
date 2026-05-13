@@ -3,8 +3,8 @@
     {
       "title": "LeoSync",
       "subtitle": "End-to-end encrypted file sync",
-      "description": "A self-hostable Dropbox alternative. Go daemon + Wails GUI + CLI on the desktop, Go relay server with Postgres. Files are E2E encrypted client-side; the relay never sees plaintext. Folder IDs (not paths) survive cross-device renames; offline edits flush as a coalesced burst when the relay reconnects. Validated across 35 scenario suites on macOS, Linux, and Windows.",
-      "tags": ["Go", "SQLite", "Postgres", "Wails", "Svelte 5", "Docker"],
+      "description": "An easy, safe, and efficient way to sync files between devices. Desktop and server apps built in Go. File activities survive to offline work periods and complex user operations, relay handles advanced cases ensuring data safety. Tested on macOS, Linux, and Windows.",
+      "tags": ["Go", "Postgres", "Docker", "Synchronization", "Wails", "Svelte 5"],
       "url": "https://leosync.leonardomanrique.com",
       "icon": "uil-sync"
     }
