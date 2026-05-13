@@ -1,17 +1,29 @@
 ---
-title: "Building LeoSync: end-to-end encrypted file sync, the hard parts"
+title: "Building LeoSync: easy file sync, not so easy development"
 date: "2026-05-07"
 readingTime: "8 min read"
-summary: "Notes from building a Dropbox alternative — relay-mediated sync, file identity that survives renames, event coalescing, X25519 key exchange, and 35 scenario suites' worth of edge cases."
+summary: "Notes from building a relay-mediated Syncthing alternative."
 tags:
   - Go
   - Distributed Systems
-  - Encryption
+  - Docker
 ---
 
-LeoSync started as a question: how hard is it, really, to build a Dropbox replacement that I'd trust with my own files? After a year of evenings and weekends, the answer is "harder than I expected, but tractable." This post is a tour of the parts that surprised me.
+This project started by the restrictions that some cloud sync services have, their poor privacy policy, and having a computer restricted to use SSH. The answer to this was of course building a Sync service myself. While starting the development of it I also discovered Syncthing, an open source alternative that could have done some of the job.
 
-## Architecture in one paragraph
+## My use case
+
+I have recently accumulated some laptops and desktop PCs. Instead of selling them I have repurposed them: one desktop PC for development, one for gaming, one laptop for daily driver when abroad, one for experimenting. Plus I have my work laptop that is restricted from using SSH. Some of these devices also happen to have a dual boot option, so having a direct sync between those OS folders was not really an option.
+
+My very initial requirement to have some files (or information) synched was when trying to plan my vacations both on my personal devices notes and my work PC. I had no way to access or transfer files in a seemless way, plus just having to turn on multiple devices at once was quite a distraction.
+
+Later I also wanted a sync service that can keep my save files from Emulators synched between all my devices, so binary file sync was now also a requirement.
+
+## My problem with Syncthing
+
+Honestly I think Syncthing works perfectly for most people with my use case. I also I own a Raspberry Pi 5 and I have access to a VPS, so I could have used any of those as an always on node to sync my files to. But there was one use case that was not covered for me: offline work. What if I work on a plane or a train? What if I my server goes down? Thinking about debugging and manually sync those changes again was not something fun to think about.
+
+``` From here it's just AI slop, ignore...``
 
 Three components: a desktop daemon (`leosyncd`) on each machine that owns all sync state, a relay server that brokers everything, and a thin CLI/GUI that talks to the daemon over a Unix socket. Devices never connect to each other directly — the relay holds state for offline peers and brokers X25519 key exchange for end-to-end encryption.
 
