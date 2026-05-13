@@ -23,7 +23,17 @@ Later I also wanted a sync service that can keep my save files from Emulators sy
 
 Honestly I think Syncthing works perfectly for most people with my use case. I also I own a Raspberry Pi 5 and I have access to a VPS, so I could have used any of those as an always on node to sync my files to. But there was one use case that was not covered for me: offline work. What if I work on a plane or a train? What if I my server goes down? Thinking about debugging and manually sync those changes again was not something fun to think about.
 
-``` From here it's just AI slop, ignore...``
+## The stack
+
+When I started the development of the project all the stack was completely different. I wanted to keep this development simple, so I went for the "easiest" technology I didn't even know so much about but was excited to learn more of: Python. I researched about the current status of Python for this kind of tools. For the file watcher it seemed to have quite mature libraries that handled the OS APIs in a stable way. Plus I found out about FastAPI, which apparently increased significantly the speed of Python processing the necessary data to act as an HTTP server.
+
+The main problem I had with Python was it being interpreted and non-typed. I don't know if it's skill issue or what, but I quickly realized that this project had quite some edge cases to take care about, and I didn't want the code to be something I also had to worry about. However I didn't want to fully rewrite yet since the File Watcher was working quite well.
+
+However the decision to stop using Python was not even caused by Python, but by Electron. I chose Electron as my UI to see the Python service working, and it was not a fun thing to do. Having to further mantain that codebase, and the fact that the RAM consumption and binary size felt not right, made me finally decide to change stack.
+
+The next candidate for the job was Go. It really seemed to fix all the issues I had: compiled language, typed, simple enough, and also had one main advantage: Wails. Wails is an Electron alernative that uses Golang as a "backend" language for a desktop app, and automatically binds those types to Typescript, it just felt like the perfect tool to work on the desktop-side sync engine while also providing a user-friendly UI to configure and monitor what is being synched. For the Relay server I migrated from FastAPI to Gin Framework, which was later easily dropped in favor of standard Go http library.
+
+`` From here it's just AI slop, ignore...``
 
 Three components: a desktop daemon (`leosyncd`) on each machine that owns all sync state, a relay server that brokers everything, and a thin CLI/GUI that talks to the daemon over a Unix socket. Devices never connect to each other directly — the relay holds state for offline peers and brokers X25519 key exchange for end-to-end encryption.
 
