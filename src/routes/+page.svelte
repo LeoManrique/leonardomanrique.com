@@ -7,10 +7,10 @@
 </script>
 
 <svelte:head>
-	<title>Leonardo Manrique — Backend Developer</title>
-	<meta name="description" content="Leonardo Manrique — Backend Developer specialized in integrations and extensions for enterprise systems." />
-	<meta property="og:title" content="Leonardo Manrique — Backend Developer" />
-	<meta property="og:description" content="Backend Developer specialized in integrations and extensions for enterprise systems." />
+	<title>Leonardo Manrique — Backend Engineer</title>
+	<meta name="description" content="Leonardo Manrique — Backend Engineer specialized in integrations and extensions for enterprise systems." />
+	<meta property="og:title" content="Leonardo Manrique — Backend Engineer" />
+	<meta property="og:description" content="Backend Backend specialized in projects for enterprise systems." />
 	<meta property="og:url" content="https://www.leonardomanrique.com/" />
 
 	{@html `<script type="application/ld+json">${JSON.stringify({
@@ -19,8 +19,8 @@
 		"mainEntity": {
 			"@type": "Person",
 			"name": "Leonardo Manrique",
-			"jobTitle": "Backend Developer",
-			"description": "Software Engineer specialized in the development of integrations and extensions for enterprise systems.",
+			"jobTitle": "Backend Engineer",
+			"description": "Backend Engineer specialized in projects for enterprise systems.",
 			"url": "https://www.leonardomanrique.com",
 			"image": "https://www.leonardomanrique.com/assets/img/profile.png",
 			"sameAs": [
