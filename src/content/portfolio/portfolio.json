@@ -3,8 +3,8 @@
     {
       "title": "LeoSync",
       "subtitle": "End-to-end reliable file sync",
-      "description": "An efficient way to sync files between devices. Desktop and server apps built in Go. File activities survive to offline work periods and complex user operations, relay handles advanced cases ensuring data safety. Tested on macOS, Linux, and Windows.",
-      "tags": ["Go", "Postgres", "Docker", "Synchronization", "Wails", "Svelte 5"],
+      "description": "An efficient way to sync files between devices. Desktop layer built in Rust, Server layer built in Go. File activities survive to offline work periods and complex user operations, relay handles advanced cases ensuring data safety. Tested on macOS, Linux, and Windows.",
+      "tags": ["Go", "Rust", "Postgres", "Docker", "Synchronization", "Distributed Systems"],
       "url": "https://leosync.leonardomanrique.com",
       "icon": "uil-sync"
     }
