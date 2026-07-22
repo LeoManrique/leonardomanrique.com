@@ -14,7 +14,6 @@ A personal portfolio website built with SvelteKit and TypeScript, featuring file
 
 - `/` — Home, About, Qualification
 - `/portfolio` — Portfolio (coming soon)
-- `/blog` — Blog (coming soon)
 
 ## Development
 

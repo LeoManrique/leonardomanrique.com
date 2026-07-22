@@ -5,7 +5,6 @@
 	const navLinks = [
 		{ href: '/', label: 'Home' },
 		{ href: '/portfolio/', label: 'Portfolio' },
-		{ href: '/blog/', label: 'Blog' }
 	];
 </script>
 
