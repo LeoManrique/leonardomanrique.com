@@ -2,24 +2,23 @@
   "name": "leonardomanrique-svelte",
   "version": "1.0.0",
   "type": "module",
+  "imports": {
+    "#lib/*": "./src/lib/*",
+    "#content/*": "./src/content/*"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^3.0.10",
-    "@sveltejs/kit": "^2.60.1",
-    "@sveltejs/vite-plugin-svelte": "^7.1.2",
-    "svelte": "^5.55.8",
-    "svelte-check": "^4.4.8",
+    "@sveltejs/adapter-static": "^4.0.0",
+    "@sveltejs/kit": "^3.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "svelte": "^5.57.1",
+    "svelte-check": "^4.7.6",
     "typescript": "^6.0.3",
-    "vite": "^8.0.13"
+    "vite": "^8.3.2"
   }
 }

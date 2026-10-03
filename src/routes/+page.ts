@@ -1,7 +1,7 @@
 import type { PageLoad } from './$types';
-import home from '$content/home/home.json';
-import about from '$content/home/about.json';
-import qualificationData from '$content/home/qualification.json';
+import home from '#content/home/home.json';
+import about from '#content/home/about.json';
+import qualificationData from '#content/home/qualification.json';
 
 interface QualificationItem {
 	title: string;
