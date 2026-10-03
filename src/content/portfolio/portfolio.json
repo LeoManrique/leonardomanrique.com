@@ -1,11 +1,11 @@
 {
   "projects": [
     {
-      "title": "LeoSync",
+      "title": "Syncden",
       "subtitle": "End-to-end reliable file sync",
-      "description": "An efficient way to sync files between devices. Desktop layer built in Rust, Server layer built in Go. File activities survive to offline work periods and complex user operations, relay handles advanced cases ensuring data safety. Tested on macOS, Linux, and Windows.",
+      "description": "An efficient way to sync files between devices. File activities survive to offline work periods and complex user operations. Relay handles advanced cases ensuring data safety. Client core layer built in Rust, Relay layer built in Go. Available on macOS, Linux, Windows and Android.",
       "tags": ["Go", "Rust", "Postgres", "Docker", "Synchronization", "Distributed Systems"],
-      "url": "https://leosync.leonardomanrique.com",
+      "url": "https://www.syncden.app/",
       "icon": "uil-sync"
     }
   ]
